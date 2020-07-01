@@ -12,7 +12,9 @@ class ListaCustasApp extends StatelessWidget {
   }
 }
 
-void abrepdf() async {
+//var linkpdf;
+
+void abrepdfold() async {
   const url =
       "https://infographya.com/files/Tabela_de_Custas_2020_-_ISS_integrante_-_1_.pdf";
   if (await canLaunch(url)) {
@@ -36,18 +38,70 @@ class ListaScreen extends StatelessWidget {
                 icon: new Icon(Icons.picture_as_pdf, color: Colors.lightBlue),
                 iconSize: 44.0,
                 onPressed: () {
-                  abrepdf();
+                  definepdf(1);
                 },
               ),
               new Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
-                    Text("Tabela do Registro Civil"),
+                    //Text("Tabela do Registro Civil"),
                     Text(" ISS integrante da base de cálculo do município 1%")
+                  ])
+            ]),
+            new Row(children: [
+              IconButton(
+                icon: new Icon(Icons.picture_as_pdf, color: Colors.lightBlue),
+                iconSize: 44.0,
+                onPressed: () {
+                  definepdf(2);
+                },
+              ),
+              new Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    //Text("Tabela do Registro Civil"),
+                    Text(" ISS integrante da base de cálculo do município 1,5%")
                   ])
             ])
           ],
         ));
+  }
+}
+
+void definepdf(int idpdf) {
+  switch (idpdf) {
+    case 1:
+      {
+        // statements;
+        abrepdf(
+            "https://infographya.com/files/Tabela_de_Custas_2020_-_ISS_integrante_-_1_.pdf");
+      }
+      break;
+
+    case 2:
+      {
+        //statements;
+        abrepdf(
+            "https://infographya.com/files/Tabela_de_Custas_2020_-_ISS_integrante_-_1,5_.pdf");
+      }
+      break;
+
+    default:
+      {
+        //statements;
+      }
+      break;
+  }
+}
+
+void abrepdf(var linkpdf) async {
+  //const url =
+  //    "https://infographya.com/files/Tabela_de_Custas_2020_-_ISS_integrante_-_1_.pdf";
+  if (await canLaunch(linkpdf)) {
+    await launch(linkpdf);
+  } else {
+    throw 'Could not launch $linkpdf';
   }
 }

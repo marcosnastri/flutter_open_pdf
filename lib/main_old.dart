@@ -25,3 +25,15 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/*    const url =
+      "https://infographya.com/files/Tabela_de_Custas_2020_-_ISS_integrante_-_1_.pdf";
+  if (await canLaunch(
+      "https://infographya.com/files/Tabela_de_Custas_2020_-_ISS_integrante_-_1_.pdf")) {
+    await launch(
+        "https://infographya.com/files/Tabela_de_Custas_2020_-_ISS_integrante_-_1_.pdf");
+  } else {
+    throw 'Could not launch $url'; */
+// }
+//}
+// */
