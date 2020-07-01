@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(new ListaCustasApp());
@@ -8,6 +9,16 @@ class ListaCustasApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(home: new ListaScreen());
+  }
+}
+
+void abrepdf() async {
+  const url =
+      "https://infographya.com/files/Tabela_de_Custas_2020_-_ISS_integrante_-_1_.pdf";
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
 
@@ -24,7 +35,9 @@ class ListaScreen extends StatelessWidget {
               IconButton(
                 icon: new Icon(Icons.cloud_download, color: Colors.green),
                 iconSize: 44.0,
-                onPressed: () {},
+                onPressed: () {
+                  abrepdf();
+                },
               ),
               new Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

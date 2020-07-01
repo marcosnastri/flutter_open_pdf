@@ -1,4 +1,4 @@
-#Tue Jun 30 08:21:10 BRT 2020
+#Wed Jul 01 07:35:58 BRT 2020
 base.0=/home/amcom/Documentos/pessoal/Mobile/flutter_open_pdf/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
