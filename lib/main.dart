@@ -26,14 +26,14 @@ class ListaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        appBar: new AppBar(title: new Text("Lista de Custas")),
+        appBar: new AppBar(title: new Text("TABELA DE CUSTAS 2020")),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             new Row(children: [
               IconButton(
-                icon: new Icon(Icons.cloud_download, color: Colors.green),
+                icon: new Icon(Icons.picture_as_pdf, color: Colors.lightBlue),
                 iconSize: 44.0,
                 onPressed: () {
                   abrepdf();
@@ -41,9 +41,10 @@ class ListaScreen extends StatelessWidget {
               ),
               new Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
-                    Text("Linha 1 : Custas SP"),
-                    Text("Linha 2 : Detalhes SP")
+                    Text("Tabela do Registro Civil"),
+                    Text(" ISS integrante da base de cálculo do município 1%")
                   ])
             ])
           ],
